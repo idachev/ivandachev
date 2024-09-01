@@ -4,7 +4,7 @@
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <div class="footer-col footer-col-1 padding-left-2">
         <ul class="contact-list">
           <li class="p-name">
             {%- if site.author -%}
@@ -17,16 +17,22 @@
           <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           {%- endif -%}
         </ul>
+        {%- if site.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg> <span>{{ site.rss | escape }}</span></a></li>{%- endif -%}
       </div>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
+      <div class="footer-col footer-col-2 padding-left-1">
+        {%- include social-1.html -%}
       </div>
 
-      <div class="footer-col footer-col-3" style="margin-top: -1em">
-        <p>Build: {{ site.build_version }} by<a href="https://jekyllrb.com" target="_blank"><img src="https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-light-transparent.png"
-                                                                                                 alt="Jekyll Logo"
-                                                                                                 style="height: 3em; vertical-align: middle; margin-bottom: 0.5em; margin-left: -0.2em"></a></p>
+      <div class="footer-col footer-col-2 padding-left-2">
+        {%- include social-2.html -%}
+      </div>
+
+      <div class="footer-col footer-col-2 padding-left-1" style="margin-top: -1em">
+        <p>
+          {{ site.build_version }}<br/>by
+          <a href="https://jekyllrb.com" target="_blank"><img src="https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-light-transparent.png" alt="Jekyll Logo" style="height: 3em; vertical-align: middle; margin-bottom: 0.5em; margin-left: -0.5em"></a>
+        </p>
       </div>
     </div>
 
