@@ -27,11 +27,18 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;600;700&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
 
-
   <!-- Ionicons -->
   <link rel="preload" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" as="style">
 
   <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+
+  {% if jekyll.environment == 'production' and site.data.settings.google-analytics %}
+  {% include google-analytics.html %}
+  {% endif %}
+
+  {%- if jekyll.environment == 'production' and site.data.settings.google-adsense -%}
+  {% include google-adsense.html %}
+  {%- endif -%}
 
   <script>
     {% if site.data.settings.color_scheme == "auto" %}

@@ -4,7 +4,6 @@
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ivandachev.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-
 #-------------------------------
 # Build Settings
 markdown: kramdown
@@ -14,7 +13,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-
 exclude:
   - tmp
   - utils
@@ -22,7 +20,6 @@ exclude:
 
 paginate: 7
 paginate_path: "/blog/page/:num"
-
 
 #-------------------------------
 # Collections
@@ -59,38 +56,6 @@ defaults:
     values:
       layout: "author"
 
-
 sass:
   sass_dir: _sass
   style: compressed
-
-### Old from monima
-
-# Social media
-
-linkedin_username: ivan-dachev-a506041a
-linkedin_username_display: Me at LinkedIn
-
-facebook_username: ivan.dachev.526
-facebook_username_display: Me at Facebook
-
-x_username: IvanDachev
-x_username_display: Me at X
-
-github_username:  idachev
-github_username_display: Me at GitHub
-
-medium_username: i.dachev
-medium_username_display: Me at Medium
-
-devto_username: idachev
-devto_username_display: Me at Dev.to
-
-rss: RSS Feed
-
-google_gtag: G-L0M11RFNVD
-google_adsense: ca-pub-1343052440261352
-
-comments:
-  disqus_username: ivandachev
-

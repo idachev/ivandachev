@@ -1,9 +1,12 @@
 #-------------------------------
 # Site Settings
-title: Mria
+title: Ivan Dachev
 logo: # You can add own logo. For example '/images/logo.png'.
-description: Mria is a multipurpose blog theme for Jekyll
-color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+description: Ivan Dachev's journey through his current incarnation path.
+# You can choose three modes auto, light, and dark.
+# By default, the auto mode is set, which means the user
+#  can choose the light or dark mode themself.
+color_scheme: auto
 
 
 #-------------------------------
@@ -40,7 +43,7 @@ hero:
 #-------------------------------
 # Author Global Settings
 author:
-  author__name: Alena Curtis
+  author__name: Ivan Dachev
   author__bio: I’m a published content creator, brand copywriter, photographer, and social media content creator and manager. I help brands connect with their customers by developing engaging content that entertains, educates, and offers value to their audience.
   author__avatar: /images/01-1.jpg
 
@@ -99,11 +102,12 @@ footer__description: Don’t limit yourself. Many people limit themselves to wha
 
 # Social Links
 social:
-- {icon: "twitter", link: "https://twitter.com"}
-- {icon: "facebook", link: "https://facebook.com"}
-- {icon: "codepen", link: "https://codepen.io"}
-- {icon: "pinterest", link: "https://pinterest.com"}
-- {icon: "vimeo", link: "https://vimeo.com"}
+- {icon: "linkedin", link: "https://www.linkedin.com/in/ivan-dachev-a506041a"}
+- {icon: "twitter", link: "https://x.com/IvanDachev"}
+- {icon: "facebook", link: "https://facebook.com/ivan.dachev.526"}
+- {icon: "github", link: "https://github.com/idachev"}
+- {svg-icon: "/assets/other-social-icons.svg#medium", svg-view-box: "0 -55 256 256", link: "https://medium.com/@i.dachev"}
+- {svg-icon: "/assets/other-social-icons.svg#devto", svg-view-box: "0 0 100 80", link: "https://dev.to/idachev"}
 
 # Example of adding a new link to the footer - {icon: "instagram", link: "https://instagram.com"}
 # Other icons can be found at https://ionicons.com/v4/
@@ -134,9 +138,10 @@ contact:
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: anvod-studio-test # Add your shortname for Disqus Comment. For example anvodstudio-demo
+disqus-identifier: ivandachev
 
 
 #-------------------------------
 # Google Analytics
-google-analytics: # Add your GA Tracking Id
+google-analytics: G-L0M11RFNVD
+google-adsense: ca-pub-1343052440261352

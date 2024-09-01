@@ -15,6 +15,7 @@
     if (!disqus_loaded) {
       disqus_loaded = true;
       var e = document.createElement("script");
+      e.setAttribute('data-timestamp', +new Date());
       e.type = "text/javascript";
       e.async = true;
       e.src = "//" + disqus_shortname + ".disqus.com/embed.js";

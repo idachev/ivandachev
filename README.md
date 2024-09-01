@@ -28,6 +28,4 @@ utils/deploy-site.sh
 
 ## Theme Development
 
-Check the [Minima Theme v2.5](https://github.com/jekyll/minima/tree/2.5-stable).
-
-Copy the files and use them.
+Theme was purchased from [JekyllThemes.io](https://jekyllthemes.io/developers/artem-sheludko) and is called [Mria](https://mria.netlify.app/).
