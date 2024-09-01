@@ -26,10 +26,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ivandachev.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social media
-linkedin_username: ivan-dachev-a506041as
+
+linkedin_username: ivan-dachev-a506041a
+linkedin_username_display: Me at LinkedIn
+
 facebook_username: ivan.dachev.526
-twitter_username: IvanDachev
+facebook_username_display: Me at Facebook
+
+x_username: IvanDachev
+x_username_display: Me at X
+
 github_username:  idachev
+github_username_display: Me at GitHub
 
 # Build settings
 theme: minima
