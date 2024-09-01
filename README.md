@@ -3,10 +3,16 @@
 ## Local
 
 ```bash
-bundle exec jekyll serve
+./utils/local-serve.sh
 ```
 
 Open [http://localhost:4000](http://localhost:4000) in your browser.
+
+If you need to check for production build, use:
+
+```bash
+JEKYLL_ENV=production ./utils/local-serve.sh
+```
 
 ## Build
 
