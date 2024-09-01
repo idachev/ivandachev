@@ -3,3 +3,10 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+/tmp
+
+.env
+
+/.idea
+

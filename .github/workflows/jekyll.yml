@@ -1,0 +1,40 @@
+name: CD Jekyll Site
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Install dependencies
+        run: |
+          apt update
+          apt install -y lftp
+          gem install bundler
+          bundle install
+
+      - name: Build site
+        run: ./utils/build-site.sh
+
+      - name: Deploy site
+        env:
+          SFTP_HOST: ${{ values.SFTP_HOST }}
+          SFTP_USER: ${{ values.SFTP_USER }}
+          SFTP_KEY_VALUE: ${{ secrets.SFTP_KEY_VALUE }}
+          SFTP_TARGET_DIR: ${{ values.SFTP_TARGET_DIR }}
+        run: ./utils/deploy-site.sh
