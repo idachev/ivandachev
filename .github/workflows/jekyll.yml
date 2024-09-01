@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y lftp
+          sudo apt install -y lftp git
           gem install bundler
           bundle install
 
