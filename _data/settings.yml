@@ -33,8 +33,8 @@ menu__settings:
 # Hero Settings
 hero:
   enable: true
-  hero__title: Thoughts, stories and ideas.
-  hero__description: Don’t limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mind lets you. What you believe, remember, you can achieve.
+  hero__title: Embrace Your Soul's Expansive Journey
+  hero__description: Embrace the journey of your incarnation. The path you walk is not confined by the limitations of this world, but is expansive, shaped by the depths of your soul's purpose. Trust in the wisdom of your spiritual path, for what you believe and envision, you have the power to manifest and achieve.
   hero__image: # You can add hero image. For example '/images/06.jpg'
 
 
@@ -65,7 +65,7 @@ videos__settings:
 #-------------------------------
 # Tag Section Settings
 tag__settings:
-  enable: true
+  enable: false
   tag: travel # To display the tag section, specify your favorite tag.
 
 
@@ -95,7 +95,7 @@ mailchimp__settings:
 
 #-------------------------------
 # Footer Settings
-footer__description: Don’t limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mind lets you. What you believe, remember, you can achieve.
+footer__description: Embrace the journey of your incarnation. The path you walk is not confined by the limitations of this world, but is expansive, shaped by the depths of your soul's purpose. Trust in the wisdom of your spiritual path, for what you believe and envision, you have the power to manifest and achieve.
 
 
 # Social Links
