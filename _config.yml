@@ -39,6 +39,8 @@ x_username_display: Me at X
 github_username:  idachev
 github_username_display: Me at GitHub
 
+rss: RSS Feed
+
 # Build settings
 theme: minima
 plugins:

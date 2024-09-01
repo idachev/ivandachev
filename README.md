@@ -19,3 +19,9 @@ utils/build-site.sh
 ```bash
 utils/deploy-site.sh
 ```
+
+## Theme Development
+
+Check the [Minima Theme v2.5](https://github.com/jekyll/minima/tree/2.5-stable).
+
+Copy the files and use them.
