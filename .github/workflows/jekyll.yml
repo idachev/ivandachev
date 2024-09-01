@@ -33,8 +33,8 @@ jobs:
 
       - name: Deploy site
         env:
-          SFTP_HOST: ${{ values.SFTP_HOST }}
-          SFTP_USER: ${{ values.SFTP_USER }}
+          SFTP_HOST: ${{ vars.SFTP_HOST }}
+          SFTP_USER: ${{ vars.SFTP_USER }}
           SFTP_KEY_VALUE: ${{ secrets.SFTP_KEY_VALUE }}
-          SFTP_TARGET_DIR: ${{ values.SFTP_TARGET_DIR }}
+          SFTP_TARGET_DIR: ${{ vars.SFTP_TARGET_DIR }}
         run: ./utils/deploy-site.sh
