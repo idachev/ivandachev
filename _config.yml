@@ -50,7 +50,8 @@ rss: RSS Feed
 google_gtag: G-L0M11RFNVD
 google_adsense: ca-pub-1343052440261352
 
-commento: true
+comments:
+  disqus_username: ivandachev
 
 # Build settings
 theme: minima
