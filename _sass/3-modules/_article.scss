@@ -32,7 +32,11 @@
       .article__title {
         font-size: 52px;
         a {
-          text-decoration-thickness: 4px;
+          text-decoration: none;
+
+          &:hover {
+            color: var(--brand-color);
+          }
         }
       }
     }
@@ -80,12 +84,16 @@
 
     @media only screen and (max-width: $tablet) {
       .article__content {
-         .article__title {
-           font-size: 26px;
-           a {
-              text-decoration-thickness: 2px;
+        .article__title {
+          font-size: 26px;
+          a {
+            text-decoration: none;
+
+            &:hover {
+              color: var(--brand-color);
             }
-         }
+          }
+        }
       }
     }
   }
@@ -194,13 +202,10 @@
   font-size: 26px;
 
   a {
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-decoration-thickness: 2px;
-    color: var(--heading-font-color);
+    text-decoration: none;
 
     &:hover {
-      text-decoration-color: var(--link-color-hover);
+      color: var(--brand-color);
     }
 
     &::after {
@@ -267,13 +272,13 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
-  text-decoration: underline;
-  text-decoration-color: transparent;
   color: var(--heading-font-color);
   transition: text-decoration-color .35s;
 
+  text-decoration: none;
+
   &:hover {
-    text-decoration-color: var(--heading-font-color);
+    color: var(--brand-color);
   }
 }
 

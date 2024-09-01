@@ -157,13 +157,10 @@
     margin: 16px 0;
 
     a {
-      text-decoration: underline;
-      text-decoration-color: transparent;
-      text-decoration-thickness: 2px;
-      color: var(--heading-font-color);
+      text-decoration: none;
 
       &:hover {
-        text-decoration-color: var(--link-color-hover);
+        color: var(--brand-color);
       }
 
       &::after {

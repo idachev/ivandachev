@@ -449,6 +449,14 @@
   .article__title {
     margin-bottom: 12px;
     font-size: 21px;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: var(--brand-color);
+      }
+    }
   }
 
   .article__excerpt {
