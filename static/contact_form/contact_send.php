@@ -14,10 +14,11 @@ const CONTENT_TYPE_APPLICATION_JSON = 'application/json';
 
 $config = include('./config.php');
 
-function is_trusted_domain($referer, $trusted_domains): bool
+function is_trusted_domain($http_referer, $trusted_domains): bool
 {
-    $parsed_url = parse_url($referer);
-    $domain = $parsed_url['host'];
+    $parsed_url = parse_url($http_referer);
+
+    $domain = $parsed_url['host'] ?? '';
 
     return in_array($domain, $trusted_domains);
 }
@@ -52,9 +53,9 @@ function redirect_to($redirect_url, $error_message = "")
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $referer = $_SERVER['HTTP_REFERER'] ?? '';
+    $http_referer = $_SERVER['HTTP_REFERER'] ?? '';
 
-    if (!is_trusted_domain($referer, $config['trusted_domains'])) {
+    if (!is_trusted_domain($http_referer, $config['trusted_domains'])) {
         return_error("Untrusted domain.");
     }
 
