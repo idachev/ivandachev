@@ -53,9 +53,16 @@ echo "SFTP_TARGET_DIR: ${SFTP_TARGET_DIR}"
 
 cp -a ./static/. ${LOCAL_SOURCE_DIR}/
 
+ls -al ${LOCAL_SOURCE_DIR}
+ls -al ${LOCAL_SOURCE_DIR}/contact_form
+
 CONFIG_FILE="${LOCAL_SOURCE_DIR}/contact_form/config.php"
 
 envsubst < "${CONFIG_FILE}" > "${CONFIG_FILE}.tmp"
+
+echo -e "\n\nUpdated config file: ${CONFIG_FILE}\n"
+
+ls -al ${LOCAL_SOURCE_DIR}/contact_form
 
 mv "${CONFIG_FILE}.tmp" "{$CONFIG_FILE}"
 
