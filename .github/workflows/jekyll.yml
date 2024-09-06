@@ -38,6 +38,6 @@ jobs:
           SFTP_KEY_VALUE: ${{ secrets.SFTP_KEY_VALUE }}
           SFTP_TARGET_DIR: ${{ vars.SFTP_TARGET_DIR }}
           CONTACT_FORM_SMTP_USERNAME: ${{ vars.CONTACT_FORM_SMTP_USERNAME }}
-          CONTACT_FORM_SMTP_PASSWORD: ${{ vars.CONTACT_FORM_SMTP_PASSWORD }}
+          CONTACT_FORM_SMTP_PASSWORD: ${{ secrets.CONTACT_FORM_SMTP_PASSWORD }}
           CONTACT_FORM_TO_EMAIL: ${{ vars.CONTACT_FORM_TO_EMAIL }}
         run: ./utils/deploy-site.sh
