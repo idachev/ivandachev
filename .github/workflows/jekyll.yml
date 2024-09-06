@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y lftp git gettext-base
+          sudo apt install -y lftp git gettext
           gem install bundler
           bundle install
 
