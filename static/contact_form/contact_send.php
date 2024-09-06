@@ -1,10 +1,13 @@
 <?php
 
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/Exception.php';
-require 'phpmailer/SMTP.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-$config = include('config.php');
+require './phpmailer/PHPMailer.php';
+require './phpmailer/Exception.php';
+require './phpmailer/SMTP.php';
+
+$config = include('../../../configs/ivandachev.com-contact-form-config.php');
 
 function redirect_to($error_message="")
 {
