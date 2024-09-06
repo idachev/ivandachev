@@ -34,7 +34,7 @@ menu__settings:
     - title: 'Готвене'
       url: '/tags/?tag=cooking'
     - url: '/about/'
-      title: 'Относно'
+      title: 'За Мен'
     - url: '/contact/'
       title: 'Контакти'
 
@@ -124,11 +124,11 @@ social:
 # Footer Navigation
 footer__menu__settings:
   menu__items:
-    - title: 'Home'
+    - title: 'Начало'
       url: '/'
-    - title: 'About'
+    - title: 'За Мен'
       url: '/about/'
-    - title: 'Contact'
+    - title: 'Контакти'
       url: '/contact/'
 
 
