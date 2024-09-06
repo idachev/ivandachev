@@ -346,6 +346,28 @@
   display: none;
 }
 
+.toggle-i18n-holder {
+  position: relative;
+  display: flex;
+  margin-left: 0;
+  align-items: center;
+
+  @media only screen and (max-width: $desktop) {
+    align-items: flex-end;
+    flex-direction: row-reverse;
+  }
+}
+
+.toggle-i18n-item {
+  margin-left: 12px;
+  user-select: none;
+  cursor: pointer;
+
+  @media only screen and (max-width: $desktop) {
+    margin-left: 10px;
+  }
+}
+
 .dark-mode {
   .toggle-sun {
     display: block;

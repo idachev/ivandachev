@@ -12,6 +12,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-polyglot
 
 exclude:
   - tmp
@@ -20,6 +21,16 @@ exclude:
 
 paginate: 7
 paginate_path: "/blog/page/:num"
+
+#-------------------------------
+# Polyglot i18n
+
+languages: ["en", "bg"]
+default_lang: "en"
+exclude_from_localization: ["javascript", "images", "css", "public"]
+parallel_localization: false
+whitelist:
+  - jekyll-redirect-from
 
 #-------------------------------
 # Collections

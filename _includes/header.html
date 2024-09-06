@@ -55,7 +55,16 @@
               <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny" aria-hidden="true"></i></div>
             </div>
             {% endif %}
+
             <i class="nav__icon icon__search ion ion-md-search"></i>
+          </div>
+
+          <div class="toggle-i18n-holder">
+            {% for tongue in site.languages %}
+            <div class="toggle-i18n-item">
+              <a {% if tongue == site.active_lang %}style="font-weight: bold;"{% endif %} {% static_href %}href="{% if tongue == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}"{% endstatic_href %} >{{ tongue }}</a>{%- if forloop.last == false -%}{{" "}}{{ site.langsep }}{%- endif -%}
+            </div>
+            {% endfor %}
           </div>
         </nav>
 
