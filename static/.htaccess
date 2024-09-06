@@ -1,0 +1,3 @@
+# Use php82 as default
+AddHandler application/x-httpd-php82 .php
+
