@@ -43,8 +43,8 @@ menu__settings:
 # Hero Settings
 hero:
   enable: true
-  hero__title: Embrace Your Soul's Expansive Journey
-  hero__description: Embrace the journey of your incarnation. The path you walk is not confined by the limitations of this world, but is expansive, shaped by the depths of your soul's purpose. Trust in the wisdom of your spiritual path, for what you believe and envision, you have the power to manifest and achieve.
+  hero__title: Прегърни Необятното Пътешествие на Своята Душа
+  hero__description: Прегърни пътешествието на своето въплъщение. Пътят, по който вървиш, не е ограничен от границите на този свят, а е необятен, формиран от дълбините на целта на твоята душа. Вярвай в мъдростта на своя духовен път, защото това, в което вярваш и което си представяш, имаш силата да осъществиш и постигнеш.
   hero__image: # You can add hero image. For example '/images/06.jpg'
 
 
@@ -94,10 +94,10 @@ author__section:
 #-------------------------------
 # Newsletter Settings
 mailchimp__settings:
-  enable: true
+  enable: false
   mailchimp__title: Get interesting news
   mailchimp__description: Subscribe to our newsletter and we’ll send you the emails of latest posts.
-  mailchimp__identifier: frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3 # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
+  mailchimp__identifier: frnla.us6.list-manage.com/subscribe/post?u=213TODO&amp;id=30TODO
   mailchimp__input__text: Your email address
   mailchimp__button__text: Subscribe
   mailchimp__background__image: /images/subscribe-bg.jpg
@@ -105,7 +105,7 @@ mailchimp__settings:
 
 #-------------------------------
 # Footer Settings
-footer__description: Embrace the journey of your incarnation. The path you walk is not confined by the limitations of this world, but is expansive, shaped by the depths of your soul's purpose. Trust in the wisdom of your spiritual path, for what you believe and envision, you have the power to manifest and achieve.
+footer__description: Прегърни пътуването на своята инкарнация. Пътят, по който вървиш, не е ограничен от пределите на този свят, а е безкраен, оформен от дълбините на целта на твоята душа. Довери се на мъдростта на своя духовен път, защото това, в което вярваш и което си представяш, имаш силата да проявиш и постигнеш.
 
 
 # Social Links

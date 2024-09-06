@@ -268,3 +268,18 @@
     background: var(--button-background-hover);
   }
 }
+
+.jekyll-logo__img {
+  height: 3em;
+  vertical-align: middle;
+  margin-bottom: 0.5em;
+  margin-left: -0.5em;
+}
+
+.jekyll-logo__img__light {
+ display: var(--jekyll-logo-light-display);
+}
+
+.jekyll-logo__img__dark {
+  display: var(--jekyll-logo-dark-display);
+}
