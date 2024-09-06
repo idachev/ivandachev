@@ -7,23 +7,39 @@ require './phpmailer/PHPMailer.php';
 require './phpmailer/Exception.php';
 require './phpmailer/SMTP.php';
 
-$config = include('../../../configs/ivandachev.com-contact-form-config.php');
+const HTTP_STATUS_BAD_REQUEST = 400;
 
-function is_trusted_domain($referer, $trusted_domains) {
-    global $config;
+const HEADER_CONTENT_TYPE = 'Content-Type';
+const CONTENT_TYPE_APPLICATION_JSON = 'application/json';
 
+$config = include('./config.php');
+
+function is_trusted_domain($referer, $trusted_domains): bool
+{
     $parsed_url = parse_url($referer);
-    $domain = $parsed_url['host'] ?? '';
+    $domain = $parsed_url['host'];
 
-    return in_array($domain, $$config['trusted_domains']);
+    return in_array($domain, $trusted_domains);
 }
 
-function redirect_to($error_message="")
+function return_error($error_message)
 {
-    global $config;
+    http_response_code(HTTP_STATUS_BAD_REQUEST);
 
-    $redirect_url = $config['redirect_url'];
+    header(HEADER_CONTENT_TYPE . ': ' . CONTENT_TYPE_APPLICATION_JSON);
 
+    $response = [
+        'error' => $error_message,
+        'timestamp' => gmdate('c')
+    ];
+
+    echo json_encode($response);
+
+    exit();
+}
+
+function redirect_to($redirect_url, $error_message = "")
+{
     $separator = (strpos($redirect_url, '?') === false) ? '?' : '&';
 
     if (empty($error_message)) {
@@ -38,13 +54,19 @@ function redirect_to($error_message="")
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $referer = $_SERVER['HTTP_REFERER'] ?? '';
 
-    if (!is_trusted_domain($referer, $trusted_domains)) {
-        redirect_to("Untrusted domain.");
+    if (!is_trusted_domain($referer, $config['trusted_domains'])) {
+        return_error("Untrusted domain.");
     }
 
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
     $message = htmlspecialchars(trim($_POST['message']));
+
+    $redirect_url = trim($_POST['redirect_url']);
+
+    if (empty($redirect_url) || strpos($redirect_url, $config['redirect_url_prefix']) !== 0) {
+        return_error("Invalid redirect URL.");
+    }
 
     if (!empty($name) && !empty($email) && !empty($message)) {
         $mail = new PHPMailer(true);
@@ -64,23 +86,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $site_title = $config['site_title'];
             $mail->isHTML(true);
             $mail->Subject = "$site_title Contact Form Submission - $name";
-            $mail->Body    = "<h2>$site_title Contact Form Submission</h2>
+            $mail->Body = "<h2>$site_title Contact Form Submission</h2>
                               <p><strong>Name:</strong> $name</p>
                               <p><strong>Email:</strong> $email</p>
                               <p><strong>Message:</strong> $message</p>";
 
             if ($mail->send()) {
-                redirect_to();
+                redirect_to($redirect_url);
             } else {
-                redirect_to("Mailer Error: " . $mail->ErrorInfo);
+                return_error("Mailer Error: " . $mail->ErrorInfo);
             }
         } catch (Exception $e) {
-            redirect_to("Mailer Exception: " . $e->getMessage());
+            return_error("Mailer Exception: " . $e->getMessage());
         }
     } else {
-        redirect_to("Please fill all the fields.");
+        redirect_to($redirect_url, "Please fill all the fields.");
     }
 } else {
-    redirect_to("Invalid request.");
+    return_error("Invalid request.");
 }
 ?>

@@ -53,9 +53,13 @@ echo "SFTP_TARGET_DIR: ${SFTP_TARGET_DIR}"
 
 cp -a ./static/. ${LOCAL_SOURCE_DIR}/
 
+CONFIG_FILE="${LOCAL_SOURCE_DIR}/contact_form/config.php"
+envsubst < "${CONFIG_FILE}" > "${CONFIG_FILE}.tmp"
+mv "${CONFIG_FILE}.tmp" "{$CONFIG_FILE}"
+
 echo -e "\n\nFiles and folders to upload: ${LOCAL_SOURCE_DIR}\n"
 
-ls -al ./_site
+ls -al ${LOCAL_SOURCE_DIR}
 
 echo -e "\n\nUploading...\n"
 
