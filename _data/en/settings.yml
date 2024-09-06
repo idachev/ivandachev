@@ -10,23 +10,33 @@ color_scheme: auto
 
 
 #-------------------------------
+# Tags Translation
+
+tags:
+  spiritual: Spiritual
+  family: Family
+  software: Software
+  cooking: Cooking
+
+
+#-------------------------------
 # Navigation Settings
 menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
-    - title: 'Blog'
-      url: '/blog/'
-    - title: 'Authors'
-      url: '/authors/'
-    - title: 'Videos'
-      url: '/videos/'
-    - title: 'Pages'
-      submenu:
-      - url: '/about/'
-        title: 'About'
-      - url: '/contact/'
-        title: 'Contact'
+    - title: 'Spiritual'
+      url: '/tags/?tag=spiritual'
+    - title: 'Family'
+      url: '/tags/?tag=family'
+    - title: 'Software'
+      url: '/tags/?tag=software'
+    - title: 'Cooking'
+      url: '/tags/?tag=cooking'
+    - url: '/about/'
+      title: 'About'
+    - url: '/contact/'
+      title: 'Contact'
 
 
 #-------------------------------

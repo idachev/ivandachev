@@ -76,3 +76,17 @@
 <!-- end header -->
 
 {% include search.html %}
+
+<script>
+  var tag_name = window.location.search.replace("?tag=", "");
+  var tag_query = tag_name ? "?tag=" + tag_name : "";
+
+  document.querySelectorAll('.toggle-i18n-item a').forEach(function(link) {
+    console.log("link", link);
+
+    var href = link.getAttribute('href');
+
+    console.log("href", href);
+    link.setAttribute('href', href + tag_query);
+  });
+</script>
