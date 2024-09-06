@@ -83,8 +83,8 @@ tag__settings:
 # Author Section Settings
 author__section:
   enable: true
-  author__section__title: Hello, my name is Alena. I’m reviewer and content creator.
-  author__section__description: I’m a published content creator, brand copywriter, photographer, and social media content creator and manager. I help brands connect with their customers by developing engaging content that entertains, educates, and offers value to their audience.
+  author__section__title: Hello, my name is Ivan Dachev.
+  author__section__description:  First and foremost I’m a spiritual human being. As a loving father, I dedicate my time to nurturing my children and providing them with a supportive environment for growth. As a dedicated software engineer, I continuously improve my skills and contribute to the tech community. In my free time, I enjoy various hobbies such as cooking, exploring new recipes, reading, and meditation for personal development.
   aurhor__section__button__text: More About Me
   aurhor__section__button__link: /about
   author__section__big__image: /images/100.jpg
@@ -105,7 +105,7 @@ mailchimp__settings:
 
 #-------------------------------
 # Footer Settings
-footer__description: Embrace the journey of your incarnation. The path you walk is not confined by the limitations of this world, but is expansive, shaped by the depths of your soul's purpose. Trust in the wisdom of your spiritual path, for what you believe and envision, you have the power to manifest and achieve.
+footer__description: Embark on the journey of your incarnation. The path you tread extends beyond the confines of this earthly realm and stretches into infinity, guided by the depths of the purpose of your soul. Trust in the wisdom of your spiritual path, for what you believe and imagine, you have the power to manifest and achieve.
 
 
 # Social Links

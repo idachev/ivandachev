@@ -83,9 +83,9 @@ tag__settings:
 # Author Section Settings
 author__section:
   enable: true
-  author__section__title: Hello, my name is Alena. I’m reviewer and content creator.
-  author__section__description: I’m a published content creator, brand copywriter, photographer, and social media content creator and manager. I help brands connect with their customers by developing engaging content that entertains, educates, and offers value to their audience.
-  aurhor__section__button__text: More About Me
+  author__section__title: Здравейте, аз съм Иван Дачев
+  author__section__description:  Преди всичко аз съм духовен човек. Като любящ баща, посвещавам времето си да възпитавам децата си и да им осигурявам подкрепяща среда за растеж. Като отдаден софтуерен инженер, непрекъснато усъвършенствам уменията си и допринасям за технологичната общност. В свободното си време се наслаждавам на различни хобита, включително готвене и изследване на нови рецепти, както и четене и медитация за личностно израстване.
+  aurhor__section__button__text: Запознайте се с Мен
   aurhor__section__button__link: /about
   author__section__big__image: /images/100.jpg
   author__section__small__image: /images/101.jpg
@@ -105,7 +105,7 @@ mailchimp__settings:
 
 #-------------------------------
 # Footer Settings
-footer__description: Прегърни пътуването на своята инкарнация. Пътят, по който вървиш, не е ограничен от пределите на този свят, а е безкраен, оформен от дълбините на целта на твоята душа. Довери се на мъдростта на своя духовен път, защото това, в което вярваш и което си представяш, имаш силата да проявиш и постигнеш.
+footer__description: Поемете по пътя на вашето божествено пътуване. Пътят, който поемате, надхвърля границите на този земен план и се простира във вечността, воден от дълбочината на целта на вашата душа. Имайте вяра във вашия духовен път, защото това, в което вярвате и което си представяте, имате способността да материализирате и да постигнете.
 
 
 # Social Links
