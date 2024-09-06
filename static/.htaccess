@@ -1,0 +1,15 @@
+<IfModule mod_fcgid.c>
+AddHandler fcgid-script .php
+FcgidWrapper /home/lz2glco/addon/ivandachev.com/php.fcgi .php
+</IfModule>
+
+<Files "*.php">
+    <Limit GET>
+        Order Allow,Deny
+        Deny from all
+    </Limit>
+    <Limit POST>
+        Order Allow,Deny
+        Allow from all
+    </Limit>
+</Files>

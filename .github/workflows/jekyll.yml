@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y lftp git
+          sudo apt install -y lftp git gettext
           gem install bundler
           bundle install
 
@@ -37,4 +37,7 @@ jobs:
           SFTP_USER: ${{ vars.SFTP_USER }}
           SFTP_KEY_VALUE: ${{ secrets.SFTP_KEY_VALUE }}
           SFTP_TARGET_DIR: ${{ vars.SFTP_TARGET_DIR }}
+          CONTACT_FORM_SMTP_USERNAME: ${{ vars.CONTACT_FORM_SMTP_USERNAME }}
+          CONTACT_FORM_SMTP_PASSWORD: ${{ secrets.CONTACT_FORM_SMTP_PASSWORD }}
+          CONTACT_FORM_TO_EMAIL: ${{ vars.CONTACT_FORM_TO_EMAIL }}
         run: ./utils/deploy-site.sh
