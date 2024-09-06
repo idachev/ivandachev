@@ -9,6 +9,15 @@ require './phpmailer/SMTP.php';
 
 $config = include('../../../configs/ivandachev.com-contact-form-config.php');
 
+function is_trusted_domain($referer, $trusted_domains) {
+    global $config;
+
+    $parsed_url = parse_url($referer);
+    $domain = $parsed_url['host'] ?? '';
+
+    return in_array($domain, $$config['trusted_domains']);
+}
+
 function redirect_to($error_message="")
 {
     global $config;
@@ -27,6 +36,12 @@ function redirect_to($error_message="")
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $referer = $_SERVER['HTTP_REFERER'] ?? '';
+
+    if (!is_trusted_domain($referer, $trusted_domains)) {
+        redirect_to("Untrusted domain.");
+    }
+
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
     $message = htmlspecialchars(trim($_POST['message']));
