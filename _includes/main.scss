@@ -17,6 +17,7 @@
     1.4-Syntax Highlighting
     1.5-Grid
     1.6-Animate
+    1.7-Loader
 :: 2-Base Styles
     2.1-Base
 :: 3-Modules
@@ -59,6 +60,8 @@
 @import '1-tools/grid';
 /* >>>>>>>>>>>>>> :: 1.6-Animate <<<<<<<<<<<<<<< */
 @import '1-tools/animate';
+/* >>>>>>>>>>>>>> :: 1.7-Loader <<<<<<<<<<<<<<< */
+@import '1-tools/loader';
 
 
 /* =======================

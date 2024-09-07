@@ -28,6 +28,11 @@
   }
 }
 
+.form__group--center {
+  display: flex;
+  justify-content: left;
+}
+
 .form__input {
   width: 100%;
   padding: 20px;
@@ -48,4 +53,14 @@
   &:focus {
     border-color: var(--brand-color);
   }
+}
+
+.error-message {
+  color: var(--error-color);
+  margin-top: 5px;
+}
+
+#contact-form-loader {
+  display: none;
+  margin-left: 10px;
 }

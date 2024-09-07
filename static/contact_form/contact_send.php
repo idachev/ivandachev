@@ -65,8 +65,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $redirect_url = trim($_POST['redirect_url']);
 
-    if (empty($redirect_url) || strpos($redirect_url, $config['redirect_url_prefix']) !== 0) {
-        return_error("Invalid redirect URL.");
+    if (parse_url($redirect_url, PHP_URL_SCHEME) === null) {
+        $redirect_url = rtrim($http_referer, '/') . '/' . ltrim($redirect_url, '/');
+    } else {
+        if (strpos($redirect_url, $config['redirect_url_prefix']) !== 0) {
+            return_error("Invalid redirect URL: " . $redirect_url);
+        }
     }
 
     if (!empty($name) && !empty($email) && !empty($message)) {

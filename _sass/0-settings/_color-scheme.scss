@@ -38,6 +38,8 @@
 
   --jekyll-logo-light-display: inline;
   --jekyll-logo-dark-display: none;
+
+  --error-color: #ff4d4d;
 }
 
 :root[dark] {
@@ -76,4 +78,6 @@
 
   --jekyll-logo-light-display: none;
   --jekyll-logo-dark-display: inline;
+
+  --error-color: #ff4d4d;
 }

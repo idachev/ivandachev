@@ -134,10 +134,11 @@ footer__menu__settings:
 
 #-------------------------------
 # Contact Settings
-# Check https://formspree.io/
+# Check https://github.com/idachev/contact-simple-form-server
 contact:
-  email: xanwkpnj
+  form_path: https://ivandachev.com/contact_form/contact_send.php
   description: For contact me, please fill out the form below.
+  description-success: Thank you for your message. I will get back to you as soon as possible.
 
 
 #-------------------------------
