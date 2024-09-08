@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-image: '/images/102.jpg'
+image: '/images/about/about-003.jpg'
 ---
 
 In operant conditioning, a reinforcement (by reward) or instead a punishment is given after a given behavior, changing the frequency and/or form of that behavior. Stimulus present when the behavior/consequence occurs come to control these behavior modifications.
@@ -13,8 +13,8 @@ Observational learning is learning that occurs through observing the behavior of
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/103.jpg" loading="lazy">
-    <img src="/images/104.jpg" loading="lazy">
+    <img src="/images/about/about-004.jpg" loading="lazy">
+    <img src="/images/about/about-005.jpg" loading="lazy">
   </div>
   <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>

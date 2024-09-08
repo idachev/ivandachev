@@ -53,7 +53,7 @@ hero:
 author:
   author__name: Ivan Dachev
   author__bio: I’m a published content creator, brand copywriter, photographer, and social media content creator and manager. I help brands connect with their customers by developing engaging content that entertains, educates, and offers value to their audience.
-  author__avatar: /images/01-1.jpg
+  author__avatar: /images/about/about-000.jpg
 
 
 #-------------------------------
@@ -87,8 +87,8 @@ author__section:
   author__section__description:  Преди всичко аз съм духовен човек. Като любящ баща, посвещавам времето си да възпитавам децата си и да им осигурявам подкрепяща среда за растеж. Като отдаден софтуерен инженер, непрекъснато усъвършенствам уменията си и допринасям за технологичната общност. В свободното си време се наслаждавам на различни хобита, включително готвене и изследване на нови рецепти, както и четене и медитация за личностно израстване.
   aurhor__section__button__text: Запознайте се с Мен
   aurhor__section__button__link: /about
-  author__section__big__image: /images/100.jpg
-  author__section__small__image: /images/101.jpg
+  author__section__big__image: /images/about/about-001.jpg
+  author__section__small__image: /images/about/about-002.jpg
 
 
 #-------------------------------
