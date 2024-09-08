@@ -9,6 +9,7 @@
   --gray: #9e9e9e;
   --dark: #0c101a;
   --dark-blue: #040b1f;
+  --signal-magenta: #FF1FCE;
   --rgb-image-color: 255, 255, 255;
   
   --image-gradient: linear-gradient(180deg, rgba(var(--rgb-image-color), 0.8), rgba(var(--rgb-image-color), 1));
@@ -39,7 +40,7 @@
   --jekyll-logo-light-display: inline;
   --jekyll-logo-dark-display: none;
 
-  --error-color: #ff4d4d;
+  --error-color: var(--signal-magenta);
 }
 
 :root[dark] {
@@ -49,6 +50,7 @@
   --gray: #bdbdbd;
   --dark: #1f2934;
   --dark-blue: #161d26;
+  --signal-magenta: #CC0AC3;
   --rgb-image-color: 22, 29, 38;
   
   --image-gradient: linear-gradient(180deg, rgba(var(--rgb-image-color), 0.8), rgba(var(--rgb-image-color), 1));
@@ -79,5 +81,5 @@
   --jekyll-logo-light-display: none;
   --jekyll-logo-dark-display: inline;
 
-  --error-color: #ff4d4d;
+  --error-color: var(--signal-magenta);
 }

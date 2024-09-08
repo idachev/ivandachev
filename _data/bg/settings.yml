@@ -134,7 +134,7 @@ footer__menu__settings:
 
 #-------------------------------
 # Contact Settings
-# Check https://github.com/idachev/contact-simple-form-server
+# Check https://github.com/idachev/contact-form-php-server
 contact:
   form_path: https://ivandachev.com/contact_form/contact_send.php
   description: Свържете се с мен чрез формата за контакт по-долу.

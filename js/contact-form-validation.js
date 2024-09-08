@@ -54,7 +54,6 @@ function showError(inputId, message) {
   const errorElement = document.createElement('div');
 
   errorElement.className = 'error-message';
-  errorElement.style.color = 'red';
   errorElement.textContent = message;
   inputElement.parentNode.appendChild(errorElement);
 }
