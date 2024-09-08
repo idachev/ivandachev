@@ -12,8 +12,8 @@ return [
     'to_email' => '${CONTACT_FORM_TO_EMAIL}',
     # Will be included in the email subject
     'site_title' => 'IvanDachev.COM',
-    # A list of trusted origins, remove the localhost when deploying
-    'trusted_origins' => ['https://ivandachev.com', 'http://localhost:4000'],
+    # A list of allowed origins, remove the localhost when deploying
+    'allowed_origins' => ['https://ivandachev.com', 'http://localhost:4000'],
     # The regular expression to validate the email address
     'email_regexp' => '/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i',
     # The min and max length of the name field
