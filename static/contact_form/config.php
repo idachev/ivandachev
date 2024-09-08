@@ -18,7 +18,7 @@ return [
     'email_regexp' => '/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i',
     # The min and max length of the name field
     'min_name_length' => 2,
-    'max_name_length' => 100,
+    'max_name_length' => 200,
     # The min and max length of the message field
     'min_message_length' => 50,
     'max_message_length' => 8000,
