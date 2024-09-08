@@ -38,3 +38,4 @@ Contact form is powered by [Contact From PHP Server](https://github.com/idachev/
 
 Change to use https://github.com/sverrirs/jekyll-paginate-v2?tab=readme-ov-file and custom pages for
 tags and categories.
+
