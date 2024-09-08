@@ -29,3 +29,7 @@ utils/deploy-site.sh
 ## Theme Development
 
 Theme was purchased from [JekyllThemes.io](https://jekyllthemes.io/developers/artem-sheludko) and is called [Mria](https://mria.netlify.app/).
+
+## Contact Form
+
+Contact form is powered by [Contact From PHP Server](https://github.com/idachev/contact-form-php-server).

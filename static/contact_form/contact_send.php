@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $site_title = $config['site_title'];
             $mail->isHTML(true);
-            $mail->Subject = "$site_title Contact Form Submission - $name";
+            $mail->Subject = "$site_title - Message from $name";
             $mail->Body = "<h2>$site_title Contact Form Submission</h2>
                               <p><strong>Name:</strong> $name</p>
                               <p><strong>Email:</strong> $email</p>
