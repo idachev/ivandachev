@@ -14,7 +14,7 @@ document.querySelector('.form').addEventListener('submit', function (event) {
   const MIN_MESSAGE_LENGTH = 50;
   const MAX_MESSAGE_LENGTH = 8000;
 
-  const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  const emailRegex = /^(([^<>()[\].,;:\s@"]+(.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+.)+[^<>()[\].,;:\s@"]{2,})$/i;
 
   document.querySelectorAll('.error-message').forEach(el => el.remove());
 
