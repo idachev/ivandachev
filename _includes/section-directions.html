@@ -1,0 +1,16 @@
+{% if site.data.settings.directions__section.enable == true %}
+<!-- begin section-directions -->
+<section class="section section-directions">
+  <div class="directions__inner">
+    {% for direction in site.data.settings.directions__section.directions %}
+    {% assign post_count = site.posts | where:"tags", direction %}
+    <div class="direction__info direction-{{ direction }}">
+      <a class="direction__image" href="/{{ direction }}"><img class="lazy" src="" data-src="/images/directions/{{ direction }}.jpg" alt="{{ direction }}"></a>
+      <h2 class="direction__name"><a class="direction__link" href="/{{ direction }}">{{ direction }}</a></h2>
+      <div class="direction__posts__count">{{ post_count.size }} {% if post_count.size < 2 %}Post{% else %}Posts{% endif %}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end section-directions -->
+{% endif %}

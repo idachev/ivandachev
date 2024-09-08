@@ -80,6 +80,16 @@ tag__settings:
 
 
 #-------------------------------
+# Directions Section Settings
+directions__section:
+  enable: true
+  directions:
+    - spiritual
+    - family
+    - software
+    - cooking
+
+#-------------------------------
 # Author Section Settings
 author__section:
   enable: true

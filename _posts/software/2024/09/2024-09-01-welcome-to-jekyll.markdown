@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2024-09-01 06:00:12 +0300
-tags:   [software]
+title: "Welcome to Jekyll!"
+date: 2024-09-01 06:00:12 +0300
+tags: [software]
 tags_color: '#4c49cb'
 lang: en
 ---

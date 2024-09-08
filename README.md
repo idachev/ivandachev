@@ -34,6 +34,10 @@ Theme was purchased from [JekyllThemes.io](https://jekyllthemes.io/developers/ar
 
 Contact form is powered by [Contact From PHP Server](https://github.com/idachev/contact-form-php-server).
 
+## Favicons
+
+Favicon by [favicon-generator](https://redketchup.io/favicon-generator).
+
 ## TODO
 
 Change to use https://github.com/sverrirs/jekyll-paginate-v2?tab=readme-ov-file and custom pages for

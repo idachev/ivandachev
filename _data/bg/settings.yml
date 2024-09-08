@@ -80,12 +80,17 @@ tag__settings:
 
 
 #-------------------------------
+# Directions Section Settings
+directions__section:
+  enable: true
+
+#-------------------------------
 # Author Section Settings
 author__section:
   enable: true
   author__section__title: Здравейте, аз съм Иван Дачев
   author__section__description:  Преди всичко аз съм духовен човек. Като любящ баща, посвещавам времето си да възпитавам децата си и да им осигурявам подкрепяща среда за растеж. Като отдаден софтуерен инженер, непрекъснато усъвършенствам уменията си и допринасям за технологичната общност. В свободното си време се наслаждавам на различни хобита, включително готвене и изследване на нови рецепти, както и четене и медитация за личностно израстване.
-  aurhor__section__button__text: Запознайте се с Мен
+  aurhor__section__button__text: Повече за Мен
   aurhor__section__button__link: /about
   author__section__big__image: /images/about/about-001.jpg
   author__section__small__image: /images/about/about-002.jpg

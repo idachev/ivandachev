@@ -347,3 +347,77 @@
   }
 }
 
+/* Section Directions */
+.section-directions {
+  position: relative;
+  width: 40px;
+  height: 400px;
+  margin: -50px auto 250px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.direction__info {
+  position: absolute;
+  text-align: center;
+  margin-bottom: 24px;
+
+  .direction__image img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 60px;
+
+    .direction__image img {
+      width: 160px;
+      height: 160px;
+    }
+
+    .direction__name {
+      font-size: 32px;
+    }
+
+    .direction__posts__count {
+      font-size: 16px;
+    }
+  }
+}
+
+
+.direction-spiritual {
+  transform: rotate(0deg) translate(200px) rotate(0deg);
+}
+
+.direction-family {
+  transform: rotate(90deg) translate(200px) rotate(-90deg);
+}
+
+.direction-software {
+  transform: rotate(180deg) translate(200px) rotate(-180deg);
+}
+
+.direction-cooking {
+  transform: rotate(270deg) translate(200px) rotate(-270deg);
+}
+
+@media only screen and (max-width: $mobile) {
+  .direction-spiritual {
+    transform: translateY(160px);
+  }
+
+  .direction-family {
+    transform: translateY(160px);
+  }
+
+  .direction-software {
+    transform: translateY(360px);
+  }
+
+  .direction-cooking {
+    transform: translateY(460px);
+  }
+}
