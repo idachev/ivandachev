@@ -14,8 +14,6 @@ const CONTENT_TYPE_APPLICATION_JSON = 'application/json';
 
 $config = include('./config.php');
 
-$email_regexp = $config['email_regexp'] ?? '/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
-
 $min_name_length = $config['min_name_length'] ?? 2;
 $max_name_length = $config['max_name_length'] ?? 100;
 
@@ -83,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars(trim($_POST['email']));
     $message = htmlspecialchars(trim($_POST['message']));
 
-    if (!preg_match($email_regexp, $email)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         return_response("Invalid email address.");
     }
 
