@@ -1,9 +1,9 @@
 ---
 layout: page
-title: About
+title: За Мен
 permalink: /about/
 image: '/images/about/about-006.jpg'
-lang: en
+lang: bg
 ---
 
 TODO

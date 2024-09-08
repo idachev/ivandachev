@@ -33,3 +33,8 @@ Theme was purchased from [JekyllThemes.io](https://jekyllthemes.io/developers/ar
 ## Contact Form
 
 Contact form is powered by [Contact From PHP Server](https://github.com/idachev/contact-form-php-server).
+
+## TODO
+
+Change to use https://github.com/sverrirs/jekyll-paginate-v2?tab=readme-ov-file and custom pages for
+tags and categories.
