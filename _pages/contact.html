@@ -14,7 +14,8 @@ lang: en
   {% endif %}
   </div>
   <form class="form" action="{% if site.data.settings.contact.form_path %}{{site.baseurl}}{{site.data.settings.contact.form_path}}{% else %}#{% endif %}" method="POST">
-    <input type="hidden" name="redirect_url" value="{{site.baseurl}}{% if site.active_lang != site.default_lang %}/{{site.active_lang}}{% else %}{% endif %}/contact/success/">
+    <input type="hidden" name="redirect_url" id="form-redirect_url"
+           value="{{site.baseurl}}{% if site.active_lang != site.default_lang %}/{{site.active_lang}}{% else %}{% endif %}/contact/success/">
 
     <div class="form__group">
       <label class="form__label screen-reader-text" for="form-name">Your Name</label>
@@ -31,8 +32,8 @@ lang: en
       <textarea class="form__input" id="form-text" name="message" rows="8" placeholder="Your message..."></textarea>
     </div>
 
-    <div class="form__group form__group--center">
-      <button class="button" type="submit">Send Message</button>
+    <div class="form__group form__group--center" id="form-submit-holder">
+      <button class="button" id="form-submit" type="submit">Send Message</button>
       <div class="loader" id="contact-form-loader"></div>
     </div>
 

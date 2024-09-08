@@ -1,5 +1,4 @@
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -7,6 +6,7 @@ require './phpmailer/PHPMailer.php';
 require './phpmailer/Exception.php';
 require './phpmailer/SMTP.php';
 
+const HTTP_STATUS_OK = 200;
 const HTTP_STATUS_BAD_REQUEST = 400;
 
 const HEADER_CONTENT_TYPE = 'Content-Type';
@@ -14,100 +14,118 @@ const CONTENT_TYPE_APPLICATION_JSON = 'application/json';
 
 $config = include('./config.php');
 
-function is_trusted_domain($http_referer, $trusted_domains): bool
-{
-    $parsed_url = parse_url($http_referer);
+$email_regexp = $config['email_regexp'] ?? '/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
 
-    $domain = $parsed_url['host'] ?? '';
+$min_name_length = $config['min_name_length'] ?? 2;
+$max_name_length = $config['max_name_length'] ?? 100;
 
-    return in_array($domain, $trusted_domains);
+$min_message_length = $config['min_message_length'] ?? 50;
+$max_message_length = $config['max_message_length'] ?? 8000;
+
+$allowed_origins = $config['allowed_origins'] ?? ['http://localhost:4000'];
+
+$http_origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+
+$allowed_origin = get_allowed_origin($http_origin, $allowed_origins);
+
+if ($allowed_origin !== null) {
+    header('Access-Control-Allow-Origin: ' . $allowed_origin);
+} else {
+    header('Access-Control-Allow-Origin: ' . $allowed_origins[0]);
 }
 
-function return_error($error_message)
-{
-    http_response_code(HTTP_STATUS_BAD_REQUEST);
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
 
-    header(HEADER_CONTENT_TYPE . ': ' . CONTENT_TYPE_APPLICATION_JSON);
+function get_allowed_origin($http_origin_check, $allowed_origins)
+{
+    if (empty($http_origin_check)) {
+        return null;
+    }
+
+    foreach ($allowed_origins as $allowed_origin) {
+        if (strpos($http_origin_check, $allowed_origin) === 0) {
+            return $allowed_origin;
+        }
+    }
+
+    return null;
+}
+
+function return_response($error_message = '')
+{
+    if (empty($error_message)) {
+        http_response_code(HTTP_STATUS_OK);
+    } else {
+        http_response_code(HTTP_STATUS_BAD_REQUEST);
+    }
 
     $response = [
         'error' => $error_message,
         'timestamp' => gmdate('c')
     ];
 
-    echo json_encode($response);
+    $response_json = json_encode($response);
 
-    exit();
-}
+    header(HEADER_CONTENT_TYPE . ': ' . CONTENT_TYPE_APPLICATION_JSON);
 
-function redirect_to($redirect_url, $error_message = "")
-{
-    $separator = (strpos($redirect_url, '?') === false) ? '?' : '&';
-
-    if (empty($error_message)) {
-        header("Location: " . $redirect_url);
-    } else {
-        header("Location: " . $redirect_url . $separator . "error_message=" . urlencode($error_message));
-    }
+    echo $response_json;
 
     exit();
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $http_referer = $_SERVER['HTTP_REFERER'] ?? '';
-
-    if (!is_trusted_domain($http_referer, $config['trusted_domains'])) {
-        return_error("Untrusted domain.");
+    if (get_allowed_origin($http_origin, $allowed_origins) === null) {
+        return_response("Not allowed origin: " . $http_origin);
     }
 
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
     $message = htmlspecialchars(trim($_POST['message']));
 
-    $redirect_url = trim($_POST['redirect_url']);
-
-    if (parse_url($redirect_url, PHP_URL_SCHEME) === null) {
-        $redirect_url = rtrim($http_referer, '/') . '/' . ltrim($redirect_url, '/');
-    } else {
-        if (strpos($redirect_url, $config['redirect_url_prefix']) !== 0) {
-            return_error("Invalid redirect URL: " . $redirect_url);
-        }
+    if (!preg_match($email_regexp, $email)) {
+        return_response("Invalid email address.");
     }
 
-    if (!empty($name) && !empty($email) && !empty($message)) {
-        $mail = new PHPMailer(true);
-
-        try {
-            $mail->isSMTP();
-            $mail->Host = $config['smtp_host'];
-            $mail->SMTPAuth = true;
-            $mail->Username = $config['smtp_username'];
-            $mail->Password = $config['smtp_password'];
-            $mail->SMTPSecure = $config['smtp_secure'];
-            $mail->Port = $config['smtp_port'];
-
-            $mail->setFrom($email, $name);
-            $mail->addAddress($config['to_email']);
-
-            $site_title = $config['site_title'];
-            $mail->isHTML(true);
-            $mail->Subject = "$site_title - Message from $name";
-            $mail->Body = "<h2>$site_title Contact Form Submission</h2>
-                              <p><strong>Name:</strong> $name</p>
-                              <p><strong>Email:</strong> $email</p>
-                              <p><strong>Message:</strong> $message</p>";
-
-            if ($mail->send()) {
-                redirect_to($redirect_url);
-            } else {
-                return_error("Mailer Error: " . $mail->ErrorInfo);
-            }
-        } catch (Exception $e) {
-            return_error("Mailer Exception: " . $e->getMessage());
-        }
-    } else {
-        redirect_to($redirect_url, "Please fill all the fields.");
+    if (strlen($name) < $min_name_length || strlen($name) > $max_name_length) {
+        return_response("Name must be between $min_name_length and $max_name_length characters.");
     }
-} else {
-    return_error("Invalid request.");
+
+    if (strlen($message) < $min_message_length || strlen($message) > $max_message_length) {
+        return_response("Message must be between $min_message_length and $max_message_length characters.");
+    }
+
+    $mail = new PHPMailer(true);
+
+    try {
+        $mail->isSMTP();
+        $mail->Host = $config['smtp_host'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $config['smtp_username'];
+        $mail->Password = $config['smtp_password'];
+        $mail->SMTPSecure = $config['smtp_secure'];
+        $mail->Port = $config['smtp_port'];
+
+        $mail->setFrom($email, $name);
+        $mail->addAddress($config['to_email']);
+
+        $site_title = $config['site_title'];
+        $mail->isHTML(true);
+        $mail->Subject = "$site_title - Message from $name";
+        $mail->Body = "<h2>$site_title Contact Form Submission</h2>
+                          <p><strong>Name:</strong> $name</p>
+                          <p><strong>Email:</strong> $email</p>
+                          <p><strong>Message:</strong> $message</p>";
+
+        if ($mail->send()) {
+            return_response();
+        } else {
+            return_response("Mailer Error: " . $mail->ErrorInfo);
+        }
+    } catch (Exception $e) {
+        return_response("Mailer Exception: " . $e->getMessage());
+    }
+} else if ($_SERVER["REQUEST_METHOD"] != "OPTIONS") {
+    return_response("Invalid request.");
 }
 ?>
