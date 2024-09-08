@@ -28,6 +28,13 @@ utils/deploy-site.sh
 
 ## Theme Development
 
-Check the [Minima Theme v2.5](https://github.com/jekyll/minima/tree/2.5-stable).
+Theme was purchased from [JekyllThemes.io](https://jekyllthemes.io/developers/artem-sheludko) and is called [Mria](https://mria.netlify.app/).
 
-Copy the files and use them.
+## Contact Form
+
+Contact form is powered by [Contact From PHP Server](https://github.com/idachev/contact-form-php-server).
+
+## TODO
+
+Change to use https://github.com/sverrirs/jekyll-paginate-v2?tab=readme-ov-file and custom pages for
+tags and categories.

@@ -1,0 +1,152 @@
+#-------------------------------
+# Site Settings
+title: Иван Дачев
+logo: # You can add own logo. For example '/images/logo.png'.
+description: Пътуването на Иван Дачев през пътя на неговата сегашна инкарнация.
+# You can choose three modes auto, light, and dark.
+# By default, the auto mode is set, which means the user
+#  can choose the light or dark mode themself.
+color_scheme: auto
+
+
+#-------------------------------
+# Tags Translation
+
+tags:
+  spiritual: Духовно
+  family: Семейство
+  software: Софтуер
+  cooking: Готвене
+
+
+#-------------------------------
+# Navigation Settings
+menu__settings:
+  menu__items:
+    - title: 'Начало'
+      url: '/'
+    - title: 'Духовно'
+      url: '/tags/?tag=spiritual'
+    - title: 'Семейство'
+      url: '/tags/?tag=family'
+    - title: 'Софтуер'
+      url: '/tags/?tag=software'
+    - title: 'Готвене'
+      url: '/tags/?tag=cooking'
+    - url: '/about/'
+      title: 'За Мен'
+    - url: '/contact/'
+      title: 'Контакти'
+
+
+#-------------------------------
+# Hero Settings
+hero:
+  enable: true
+  hero__title: Прегърни Необятното Пътешествие на Своята Душа
+  hero__description: Прегърни пътешествието на своето въплъщение. Пътят, по който вървиш, не е ограничен от границите на този свят, а е необятен, формиран от дълбините на целта на твоята душа. Вярвай в мъдростта на своя духовен път, защото това, в което вярваш и което си представяш, имаш силата да осъществиш и постигнеш.
+  hero__image: # You can add hero image. For example '/images/06.jpg'
+
+
+#-------------------------------
+# Author Global Settings
+author:
+  author__name: Ivan Dachev
+  author__bio: I’m a published content creator, brand copywriter, photographer, and social media content creator and manager. I help brands connect with their customers by developing engaging content that entertains, educates, and offers value to their audience.
+  author__avatar: /images/about/about-000.jpg
+
+
+#-------------------------------
+# Blog Section Settings
+blog__settings:
+  enable: true
+  blog__title: Latest Posts
+  blog__description:
+
+
+#-------------------------------
+# Videos Section Settings
+videos__settings:
+  enable: true
+  videos__title: Latest Videos
+  videos__description:
+
+
+#-------------------------------
+# Tag Section Settings
+tag__settings:
+  enable: false
+  tag: travel # To display the tag section, specify your favorite tag.
+
+
+#-------------------------------
+# Author Section Settings
+author__section:
+  enable: true
+  author__section__title: Здравейте, аз съм Иван Дачев
+  author__section__description:  Преди всичко аз съм духовен човек. Като любящ баща, посвещавам времето си да възпитавам децата си и да им осигурявам подкрепяща среда за растеж. Като отдаден софтуерен инженер, непрекъснато усъвършенствам уменията си и допринасям за технологичната общност. В свободното си време се наслаждавам на различни хобита, включително готвене и изследване на нови рецепти, както и четене и медитация за личностно израстване.
+  aurhor__section__button__text: Запознайте се с Мен
+  aurhor__section__button__link: /about
+  author__section__big__image: /images/about/about-001.jpg
+  author__section__small__image: /images/about/about-002.jpg
+
+
+#-------------------------------
+# Newsletter Settings
+mailchimp__settings:
+  enable: false
+  mailchimp__title: Get interesting news
+  mailchimp__description: Subscribe to our newsletter and we’ll send you the emails of latest posts.
+  mailchimp__identifier: frnla.us6.list-manage.com/subscribe/post?u=213TODO&amp;id=30TODO
+  mailchimp__input__text: Your email address
+  mailchimp__button__text: Subscribe
+  mailchimp__background__image: /images/subscribe-bg.jpg
+
+
+#-------------------------------
+# Footer Settings
+footer__description: Поемете по пътя на вашето божествено пътуване. Пътят, който поемате, надхвърля границите на този земен план и се простира във вечността, воден от дълбочината на целта на вашата душа. Имайте вяра във вашия духовен път, защото това, в което вярвате и което си представяте, имате способността да материализирате и да постигнете.
+
+
+# Social Links
+social:
+- {icon: "linkedin", link: "https://www.linkedin.com/in/ivan-dachev-a506041a"}
+- {icon: "twitter", link: "https://x.com/IvanDachev"}
+- {icon: "facebook", link: "https://facebook.com/ivan.dachev.526"}
+- {icon: "github", link: "https://github.com/idachev"}
+- {svg-icon: "/assets/other-social-icons.svg#medium", svg-view-box: "0 -55 256 256", link: "https://medium.com/@i.dachev"}
+- {svg-icon: "/assets/other-social-icons.svg#devto", svg-view-box: "0 0 100 80", link: "https://dev.to/idachev"}
+
+# Example of adding a new link to the footer - {icon: "instagram", link: "https://instagram.com"}
+# Other icons can be found at https://ionicons.com/v4/
+
+
+# Footer Navigation
+footer__menu__settings:
+  menu__items:
+    - title: 'Начало'
+      url: '/'
+    - title: 'За Мен'
+      url: '/about/'
+    - title: 'Контакти'
+      url: '/contact/'
+
+
+#-------------------------------
+# Contact Settings
+# Check https://github.com/idachev/contact-form-php-server
+contact:
+  form_path: https://ivandachev.com/contact_form/contact_send.php
+  description: Свържете се с мен чрез формата за контакт по-долу.
+  description-success: Благодаря ви за вашето съобщение. Ще се свържа с вас възможно най-скоро.
+
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: ivandachev
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: G-L0M11RFNVD
+google-adsense: ca-pub-1343052440261352

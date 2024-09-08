@@ -1,0 +1,43 @@
+---
+layout: page
+title: Контакти
+description:
+permalink: /contact/
+image: '/images/contact/contact-000.jpg'
+lang: bg
+---
+
+<div class="form-box">
+  <div class="contact-head">
+  {% if site.data.settings.contact.description %}
+    <p class="contact-description">{{site.data.settings.contact.description}}</p>
+  {% endif %}
+  </div>
+  <form class="form" action="{% if site.data.settings.contact.form_path %}{{site.baseurl}}{{site.data.settings.contact.form_path}}{% else %}#{% endif %}" method="POST">
+    <input type="hidden" name="redirect_url" id="form-redirect_url"
+           value="{{site.baseurl}}{% if site.active_lang != site.default_lang %}/{{site.active_lang}}{% else %}{% endif %}/contact/success/">
+
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="form-name">Your Name</label>
+      <input class="form__input" id="form-name" type="text" name="name" placeholder="Вашето име...">
+    </div>
+
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="form-email">Your Email</label>
+      <input class="form__input" id="form-email" type="text" name="email" placeholder="Вашият email...">
+    </div>
+
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="form-text">Your Message</label>
+      <textarea class="form__input" id="form-text" name="message" rows="8" placeholder="Вашето съобщение..."></textarea>
+    </div>
+
+    <div class="form__group form__group--center" id="form-submit-holder">
+      <button class="button" id="form-submit" type="submit">Изпрати</button>
+      <div class="loader" id="contact-form-loader"></div>
+    </div>
+
+  </form>
+</div>
+
+<script src="{{ site.baseurl }}/js/contact-form-validation.js"></script>

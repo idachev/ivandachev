@@ -1,0 +1,152 @@
+#-------------------------------
+# Site Settings
+title: Ivan Dachev
+logo: # You can add own logo. For example '/images/logo.png'.
+description: Ivan Dachev's journey through his current incarnation path.
+# You can choose three modes auto, light, and dark.
+# By default, the auto mode is set, which means the user
+#  can choose the light or dark mode themself.
+color_scheme: auto
+
+
+#-------------------------------
+# Tags Translation
+
+tags:
+  spiritual: Spiritual
+  family: Family
+  software: Software
+  cooking: Cooking
+
+
+#-------------------------------
+# Navigation Settings
+menu__settings:
+  menu__items:
+    - title: 'Home'
+      url: '/'
+    - title: 'Spiritual'
+      url: '/tags/?tag=spiritual'
+    - title: 'Family'
+      url: '/tags/?tag=family'
+    - title: 'Software'
+      url: '/tags/?tag=software'
+    - title: 'Cooking'
+      url: '/tags/?tag=cooking'
+    - url: '/about/'
+      title: 'About'
+    - url: '/contact/'
+      title: 'Contact'
+
+
+#-------------------------------
+# Hero Settings
+hero:
+  enable: true
+  hero__title: Embrace Your Soul's Expansive Journey
+  hero__description: Embrace the journey of your incarnation. The path you walk is not confined by the limitations of this world, but is expansive, shaped by the depths of your soul's purpose. Trust in the wisdom of your spiritual path, for what you believe and envision, you have the power to manifest and achieve.
+  hero__image: # You can add hero image. For example '/images/06.jpg'
+
+
+#-------------------------------
+# Author Global Settings
+author:
+  author__name: Ivan Dachev
+  author__bio: I’m a published content creator, brand copywriter, photographer, and social media content creator and manager. I help brands connect with their customers by developing engaging content that entertains, educates, and offers value to their audience.
+  author__avatar: /images/about/about-000.jpg
+
+
+#-------------------------------
+# Blog Section Settings
+blog__settings:
+  enable: true
+  blog__title: Latest Posts
+  blog__description:
+
+
+#-------------------------------
+# Videos Section Settings
+videos__settings:
+  enable: true
+  videos__title: Latest Videos
+  videos__description:
+
+
+#-------------------------------
+# Tag Section Settings
+tag__settings:
+  enable: false
+  tag: travel # To display the tag section, specify your favorite tag.
+
+
+#-------------------------------
+# Author Section Settings
+author__section:
+  enable: true
+  author__section__title: Hello, my name is Ivan Dachev
+  author__section__description:  First and foremost I’m a spiritual human being. As a loving father, I dedicate my time to nurturing my children and providing them with a supportive environment for growth. As a dedicated software engineer, I continuously improve my skills and contribute to the tech community. In my free time, I enjoy various hobbies such as cooking, exploring new recipes, reading, and meditation for personal development.
+  aurhor__section__button__text: More About Me
+  aurhor__section__button__link: /about
+  author__section__big__image: /images/about/about-001.jpg
+  author__section__small__image: /images/about/about-002.jpg
+
+
+#-------------------------------
+# Newsletter Settings
+mailchimp__settings:
+  enable: false
+  mailchimp__title: Get interesting news
+  mailchimp__description: Subscribe to our newsletter and we’ll send you the emails of latest posts.
+  mailchimp__identifier: frnla.us6.list-manage.com/subscribe/post?u=213TODO&amp;id=30TODO
+  mailchimp__input__text: Your email address
+  mailchimp__button__text: Subscribe
+  mailchimp__background__image: /images/subscribe-bg.jpg
+
+
+#-------------------------------
+# Footer Settings
+footer__description: Embark on the journey of your incarnation. The path you tread extends beyond the confines of this earthly realm and stretches into infinity, guided by the depths of the purpose of your soul. Trust in the wisdom of your spiritual path, for what you believe and imagine, you have the power to manifest and achieve.
+
+
+# Social Links
+social:
+- {icon: "linkedin", link: "https://www.linkedin.com/in/ivan-dachev-a506041a"}
+- {icon: "twitter", link: "https://x.com/IvanDachev"}
+- {icon: "facebook", link: "https://facebook.com/ivan.dachev.526"}
+- {icon: "github", link: "https://github.com/idachev"}
+- {svg-icon: "/assets/other-social-icons.svg#medium", svg-view-box: "0 -55 256 256", link: "https://medium.com/@i.dachev"}
+- {svg-icon: "/assets/other-social-icons.svg#devto", svg-view-box: "0 0 100 80", link: "https://dev.to/idachev"}
+
+# Example of adding a new link to the footer - {icon: "instagram", link: "https://instagram.com"}
+# Other icons can be found at https://ionicons.com/v4/
+
+
+# Footer Navigation
+footer__menu__settings:
+  menu__items:
+    - title: 'Home'
+      url: '/'
+    - title: 'About'
+      url: '/about/'
+    - title: 'Contact'
+      url: '/contact/'
+
+
+#-------------------------------
+# Contact Settings
+# Check https://github.com/idachev/contact-simple-form-server
+contact:
+  form_path: https://ivandachev.com/contact_form/contact_send.php
+  description: For contact me, please fill out the form below.
+  description-success: Thank you for your message. I will get back to you as soon as possible.
+
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: ivandachev
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: G-L0M11RFNVD
+google-adsense: ca-pub-1343052440261352
