@@ -4,7 +4,7 @@
 {% else %}
 {% assign lang_url = "" %}
 {% endif %}
-<section class="section section-directions animate">
+<section class="section section-directions">
   <div class="directions__inner animate">
     <div class="container">
       <div class="row">
@@ -13,12 +13,19 @@
         </div>
         <div class="direction__container col col-4 col-d-6 col-t-12">
           <div class="direction__info">
-            <a class="direction__image" href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=spiritual"><img
-                class="lazy" data-src="/images/directions/spiritual.jpg" alt="spiritual"></a>
+            <a class="direction__image" href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=spiritual">
+              <img class="lazy"
+                   data-src="/images/directions/spiritual.jpg"
+                   src="/images/directions/spiritual.jpg"
+                   alt="spiritual">
+            </a>
+            <a class="direction__link"
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=spiritual">
+              <h2 class="direction__name">
+                {{site.data[site.active_lang].translate.spiritual}}
+              </h2>
+            </a>
           </div>
-          <h2 class="direction__name"><a class="direction__link"
-                                         href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=spiritual">{{
-            site.data[site.active_lang].translate.spiritual }}</a></h2>
         </div>
         <div class="col col-4 col-d-6 col-t-12">
           <div class="direction__info_empty"></div>
@@ -34,11 +41,13 @@
                    src="/images/directions/family.jpg"
                    alt="family">
             </a>
-          </div>
-          <h2 class="direction__name">
             <a class="direction__link"
-               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=family">{{site.data[site.active_lang].translate.family}}</a>
-          </h2>
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=family">
+              <h2 class="direction__name">
+                {{site.data[site.active_lang].translate.family}}
+              </h2>
+            </a>
+          </div>
         </div>
         <div class="direction__container col col-4 col-d-6 col-t-12">
           <div class="direction__info">
@@ -50,10 +59,6 @@
                    alt="about">
             </a>
           </div>
-          <h2 class="direction__name">
-            <a class="direction__link"
-               href="{{ site.baseurl }}{{ lang_url }}/about">{{site.data[site.active_lang].translate.about}}</a>
-          </h2>
         </div>
         <div class="direction__container col col-4 col-d-6 col-t-12">
           <div class="direction__info">
@@ -63,11 +68,13 @@
                    src="/images/directions/software.jpg"
                    alt="spiritual">
             </a>
-          </div>
-          <h2 class="direction__name">
             <a class="direction__link"
-               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=software">{{site.data[site.active_lang].translate.software}}</a>
-          </h2>
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=software">
+              <h2 class="direction__name">
+                {{site.data[site.active_lang].translate.software}}
+              </h2>
+            </a>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -77,13 +84,19 @@
         <div class="direction__container col col-4 col-d-6 col-t-12">
           <div class="direction__info">
             <a class="direction__image"
-               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=cooking"><img class="lazy"
-                                                                              data-src="/images/directions/cooking.jpg"
-                                                                              alt="cooking"></a>
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=cooking">
+              <img class="lazy"
+                   data-src="/images/directions/cooking.jpg"
+                   src="/images/directions/cooking.jpg"
+                   alt="cooking">
+            </a>
+            <a class="direction__link"
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=cooking">
+              <h2 class="direction__name">
+                {{site.data[site.active_lang].translate.cooking}}
+              </h2>
+            </a>
           </div>
-          <h2 class="direction__name"><a class="direction__link"
-                                         href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=cooking">{{
-            site.data[site.active_lang].translate.cooking }}</a></h2>
         </div>
         <div class="col col-4 col-d-6 col-t-12">
           <div class="direction__info_empty"></div>
@@ -92,4 +105,28 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll('.direction__info').forEach(info => {
+    let timer;
+
+    info.addEventListener('mouseover', function () {
+      const directionName = this.querySelector('.direction__name');
+      if (directionName) {
+        timer = setTimeout(() => {
+          directionName.style.display = 'block';
+        }, 300);
+      }
+    });
+
+    info.addEventListener('mouseleave', function () {
+      const directionName = this.querySelector('.direction__name');
+      if (directionName) {
+        clearTimeout(timer);
+
+        directionName.style.display = 'none';
+      }
+    });
+  });
+</script>
 <!-- end section-directions -->
