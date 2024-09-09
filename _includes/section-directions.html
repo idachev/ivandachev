@@ -105,28 +105,4 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.querySelectorAll('.direction__info').forEach(info => {
-    let timer;
-
-    info.addEventListener('mouseover', function () {
-      const directionName = this.querySelector('.direction__name');
-      if (directionName) {
-        timer = setTimeout(() => {
-          directionName.style.display = 'block';
-        }, 300);
-      }
-    });
-
-    info.addEventListener('mouseleave', function () {
-      const directionName = this.querySelector('.direction__name');
-      if (directionName) {
-        clearTimeout(timer);
-
-        directionName.style.display = 'none';
-      }
-    });
-  });
-</script>
 <!-- end section-directions -->

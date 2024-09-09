@@ -353,19 +353,18 @@ $header-entry-height: 110px;
 
 $directions-space-bottom: 10px;
 
-$directions-space-img: 80px;
-$directions-space-anim-img: 30px;
+$directions-space-img: calc(100vh / 6.5);
+$directions-space-anim-img: calc(100vh / 22);
 
-$directions-space-top: -1 * ($header-entry-height - calc($directions-space-img / 6));
+$directions-space-top: calc(-1 * ($header-entry-height) + $directions-space-anim-img / 2);
 
-$directions-space-vall: -0.4*$directions-space-top + (3 * $directions-space-img) + (3 * $font-size-h2) + $directions-space-bottom;
+$directions-space-vall: calc((0.4 * $directions-space-top) + (3 * $directions-space-img) + $directions-space-bottom);
 
-$directions-space-anim-img-d: $directions-space-anim-img + $directions-space-anim-img;
+$directions-space-info-padding-hover: 10px;
+$directions-space-info-padding: calc($directions-space-info-padding-hover + $directions-space-anim-img);
 
-$directions-space-info-padding-hover: 20px;
-$directions-space-info-padding: $directions-space-info-padding-hover + $directions-space-anim-img;
-
-
+$image_size: calc((100vh - $directions-space-vall) / 3);
+$image_hover_size: calc((100vh - $directions-space-vall) / 3 + 2 * $directions-space-anim-img);
 
 .section-directions {
   margin-top: $directions-space-top;
@@ -390,9 +389,14 @@ $directions-space-info-padding: $directions-space-info-padding-hover + $directio
     transition: .9s ease;
 
     .direction__image {
-      width: calc(((100vh - $directions-space-vall) / 3) + $directions-space-anim-img-d);
-      height: calc(((100vh - $directions-space-vall) / 3) + $directions-space-anim-img-d);
+      width: $image_hover_size;
+      height: $image_hover_size;
       transition: .9s ease;
+    }
+
+    .direction__name {
+      font-size: calc($image_hover_size / 7);
+      transition: .4s ease;
     }
   }
 
@@ -400,8 +404,8 @@ $directions-space-info-padding: $directions-space-info-padding-hover + $directio
     position: relative;
     transform: translate(0);
     display: block;
-    width: calc((100vh - $directions-space-vall) / 3);
-    height: calc((100vh - $directions-space-vall) / 3);
+    width: $image_size;
+    height: $image_size;
     margin: auto;
     border-radius: 50%;
     overflow: hidden;
@@ -420,7 +424,8 @@ $directions-space-info-padding: $directions-space-info-padding-hover + $directio
   }
 
   .direction__name {
-    display: none;
+    font-size: 0;
+    transition: font-size .4s ease;
 
     position: absolute;
     top: 60%;
