@@ -42,7 +42,7 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  enable: true
+  enable: false
   hero__title: Embrace Your Soul's Expansive Journey
   hero__description: Embrace the journey of your incarnation. The path you walk is not confined by the limitations of this world, but is expansive, shaped by the depths of your soul's purpose. Trust in the wisdom of your spiritual path, for what you believe and envision, you have the power to manifest and achieve.
   hero__image: # You can add hero image. For example '/images/06.jpg'

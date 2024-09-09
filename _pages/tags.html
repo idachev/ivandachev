@@ -18,6 +18,12 @@ permalink: /tags/
       <div class="row">
         <div class="col col-12">
           <div class="tag__info">
+            <div class="tag__image">
+              <img class="lazy"
+                   data-src="/images/directions/{{this_word}}.jpg"
+                   src="/images/directions/{{this_word}}.jpg"
+                   alt="{{this_word}}">
+            </div>
             <div class="tag__counter">{{ site.tags[this_word].size }} {% if site.tags[page.tag].size < 2 %}Post{% else %}Posts{% endif %}</div>
             <h2 class="tag__name">{{ site.data[site.active_lang].settings.tags[this_word] }}</h2>
             </div>
@@ -50,3 +56,5 @@ permalink: /tags/
     el.classList.remove("is-hidden");
   }
 </script>
+
+{% include section-author.html %}

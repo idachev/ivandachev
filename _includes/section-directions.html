@@ -1,0 +1,108 @@
+<!-- begin section-directions -->
+{% if site.active_lang != site.default_lang %}
+{% assign lang_url = '/' | append: site.active_lang %}
+{% else %}
+{% assign lang_url = "" %}
+{% endif %}
+<section class="section section-directions">
+  <div class="directions__inner animate-entry">
+    <div class="container">
+      <div class="row">
+        <div class="col col-4 col-t-12">
+          <div class="direction__info_empty"></div>
+        </div>
+        <div class="direction__container col col-4 col-t-12">
+          <div class="direction__info">
+            <a class="direction__image" href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=spiritual">
+              <img class="lazy"
+                   data-src="/images/directions/spiritual.jpg"
+                   src="/images/directions/spiritual.jpg"
+                   alt="spiritual">
+            </a>
+            <a class="direction__link"
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=spiritual">
+              <h2 class="direction__name">
+                {{site.data[site.active_lang].translate.spiritual}}
+              </h2>
+            </a>
+          </div>
+        </div>
+        <div class="col col-4 col-t-12">
+          <div class="direction__info_empty"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-4 col-t-12">
+          <div class="direction__info">
+            <a class="direction__image"
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=family">
+              <img class="lazy"
+                   data-src="/images/directions/family.jpg"
+                   src="/images/directions/family.jpg"
+                   alt="family">
+            </a>
+            <a class="direction__link"
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=family">
+              <h2 class="direction__name">
+                {{site.data[site.active_lang].translate.family}}
+              </h2>
+            </a>
+          </div>
+        </div>
+        <div class="direction__container col col-4 col-t-12">
+          <div class="direction__info">
+            <a class="direction__image"
+               href="{{ site.baseurl }}{{ lang_url }}/about">
+              <img class="lazy"
+                   data-src="/images/about/about-000.jpg"
+                   src="/images/about/about-000.jpg"
+                   alt="about">
+            </a>
+          </div>
+        </div>
+        <div class="direction__container col col-4 col-t-12">
+          <div class="direction__info">
+            <a class="direction__image" href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=software">
+              <img class="lazy"
+                   data-src="/images/directions/software.jpg"
+                   src="/images/directions/software.jpg"
+                   alt="spiritual">
+            </a>
+            <a class="direction__link"
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=software">
+              <h2 class="direction__name">
+                {{site.data[site.active_lang].translate.software}}
+              </h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-4 col-t-12">
+          <div class="direction__info_empty"></div>
+        </div>
+        <div class="direction__container col col-4 col-t-12">
+          <div class="direction__info">
+            <a class="direction__image"
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=cooking">
+              <img class="lazy"
+                   data-src="/images/directions/cooking.jpg"
+                   src="/images/directions/cooking.jpg"
+                   alt="cooking">
+            </a>
+            <a class="direction__link"
+               href="{{ site.baseurl }}{{ lang_url }}/tags/?tag=cooking">
+              <h2 class="direction__name">
+                {{site.data[site.active_lang].translate.cooking}}
+              </h2>
+            </a>
+          </div>
+        </div>
+        <div class="col col-4 col-t-12">
+          <div class="direction__info_empty"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section-directions -->
