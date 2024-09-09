@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
+
+concurrency:
+  group: cd-jekyll-site
+  cancel-in-progress: true
 
 jobs:
   build:
