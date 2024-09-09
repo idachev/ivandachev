@@ -3,7 +3,6 @@ layout: post
 title: "First Born"
 date: 2024-09-01 11:00:12 +0300
 tags: [spiritual]
-tags_color: '#1149cb'
 lang: bg
 ---
 # Hello Spiritual 1 Post 
