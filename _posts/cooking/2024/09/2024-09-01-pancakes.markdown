@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Pancakes"
+image: /images/posts/cooking/2024/09/2024-09-01-pancakes-001.jpg
+date: 2024-09-01 11:00:12 +0300
+tags: [cooking]
+lang: en
+---
+
+# TODO Pancakes 
