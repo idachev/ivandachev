@@ -1,0 +1,28 @@
+{
+    "id": "https://ivandachev.com",
+    "start_url": "https://ivandachev.com/index.html",
+    "name": "Ivan Dachev",
+    "short_name": "Ivan Dachev",
+    "lang": "en",
+    "display": "browser",
+    "orientation": "landscape",
+    "theme_color": "#FFFFFF",
+    "background_color": "#0c101a",
+    "icons": [
+       {
+          "src": "/images/favicon/favicon-180x180.png",
+          "sizes": "180x180",
+          "type": "image/png"
+       },
+       {
+          "src": "/images/favicon/favicon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+       },
+       {
+        "src": "/images/favicon/favicon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+        }
+    ]
+ }
