@@ -15,6 +15,5 @@ FcgidWrapper /home/lz2glco/addon/ivandachev.com/php.fcgi .php
 </Files>
 
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)$ $1.html [L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

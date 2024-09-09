@@ -20,14 +20,6 @@
 
     <div class="article__content">
 
-      {% if post.tags.size >= 1 %}
-      <div class="article__tags">
-        {% for tag in post.tags %}
-          <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="article__tag{% if post.tags_color %} tag-color-js{% endif %}" {% if post.tags_color %}data-accent="{{ post.tags_color }}"{% endif %} {% if post.tags_color %}style="color: {{ post.tags_color }};"{% endif %}>{{ tag }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
-
       <h2 class="article__title">
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>

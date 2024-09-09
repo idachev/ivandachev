@@ -7,14 +7,6 @@ layout: default
     {% if page.video_embed %} {% assign videoInfo = ' post__info-video' %} {% endif %}
     <div class="post__info{{videoInfo}}">
 
-      {% if page.tags.size >= 1 %}
-        <div class="post__tags">
-          {% for tag in page.tags %}
-            <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="post__tag{% if page.tags_color %} tag-color-js{% endif %}" {% if page.tags_color %}data-accent="{{ page.tags_color }}"{% endif %} {% if page.tags_color %}style="color: {{ page.tags_color }};"{% endif %}>{{ tag }}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
-
       <h1 class="post__title">{{ page.title | escape }}</h1>
 
       {% if page.description %}
