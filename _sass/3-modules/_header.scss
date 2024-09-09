@@ -366,6 +366,12 @@
   @media only screen and (max-width: $desktop) {
     margin-left: 10px;
   }
+
+  a {
+    &:hover {
+      color: var(--brand-color);
+    }
+  }
 }
 
 .dark-mode {
