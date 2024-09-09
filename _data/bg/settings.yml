@@ -42,7 +42,7 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  enable: true
+  enable: false
   hero__title: Прегърни Необятното Пътешествие на Своята Душа
   hero__description: Прегърни пътешествието на своето въплъщение. Пътят, по който вървиш, не е ограничен от границите на този свят, а е необятен, формиран от дълбините на целта на твоята душа. Вярвай в мъдростта на своя духовен път, защото това, в което вярваш и което си представяш, имаш силата да осъществиш и постигнеш.
   hero__image: # You can add hero image. For example '/images/06.jpg'
@@ -78,11 +78,6 @@ tag__settings:
   enable: false
   tag: travel # To display the tag section, specify your favorite tag.
 
-
-#-------------------------------
-# Directions Section Settings
-directions__section:
-  enable: true
 
 #-------------------------------
 # Author Section Settings

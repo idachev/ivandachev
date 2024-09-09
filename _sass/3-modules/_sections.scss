@@ -349,75 +349,63 @@
 
 /* Section Directions */
 .section-directions {
-  position: relative;
-  width: 40px;
-  height: 400px;
-  margin: -50px auto 250px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 100px;
+  margin-top: -100px;
 }
 
 .direction__info {
-  position: absolute;
-  text-align: center;
-  margin-bottom: 24px;
+  /* should be the half of the hover img width/height change 100px/2
+     plus the margin of the hover 100px/2 + 30px = 80px */
+  padding: 80px;
+  transition: .9s ease;
 
-  .direction__image img {
+  &:hover {
+    padding: 30px;
+    transition: .9s ease;
+
+    .direction__image {
+      width: 300px;
+      height: 300px;
+      transition: .9s ease;
+    }
+  }
+
+  .direction__image {
+    position: relative;
+    transform: translate(0);
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-  }
+    overflow: hidden;
+    background: var(--background-alt-color);
+    transition: .9s ease;
 
-  @media only screen and (max-width: $mobile) {
-    margin-bottom: 60px;
-
-    .direction__image img {
-      width: 160px;
-      height: 160px;
-    }
-
-    .direction__name {
-      font-size: 32px;
-    }
-
-    .direction__posts__count {
-      font-size: 16px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
     }
   }
 }
 
+.direction__name {
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 1;
 
-.direction-spiritual {
-  transform: rotate(0deg) translate(200px) rotate(0deg);
-}
+  .authors__link {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: transparent;
 
-.direction-family {
-  transform: rotate(90deg) translate(200px) rotate(-90deg);
-}
-
-.direction-software {
-  transform: rotate(180deg) translate(200px) rotate(-180deg);
-}
-
-.direction-cooking {
-  transform: rotate(270deg) translate(200px) rotate(-270deg);
-}
-
-@media only screen and (max-width: $mobile) {
-  .direction-spiritual {
-    transform: translateY(160px);
-  }
-
-  .direction-family {
-    transform: translateY(160px);
-  }
-
-  .direction-software {
-    transform: translateY(360px);
-  }
-
-  .direction-cooking {
-    transform: translateY(460px);
+    &:hover {
+      text-decoration-color: var(--link-color-hover);
+    }
   }
 }
