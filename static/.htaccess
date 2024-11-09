@@ -21,5 +21,5 @@ RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 AuthType Basic
 AuthName "Restricted Area"
-AuthUserFile /home/lz2glco/addon/ivandachev.com/.htpasswd
+AuthUserFile /home/lz2glco/.htpasswds/.htpasswd-ivandachev
 Require valid-user
